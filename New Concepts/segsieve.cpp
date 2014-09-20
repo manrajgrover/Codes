@@ -45,31 +45,23 @@ int main() {
         for(i=0;i<DIFF_SIZE;i++)
             primesNow[i]=true;
         populateMyPrimes(N);
-        for(i=0;i<cnt;i++) //for each prime in sqrt(N) we need to use it in the segmented sieve process
+        for(i=0;i<cnt;i++)
         {
-            p = myPrimes[i]; //store the prime
+            p = myPrimes[i];
             s = M / p;
-            s = s * p; //the closest number less than M that is a composite number for this prime p
+            s = s * p;
 
             for (int j = s; j <= N; j = j + p) {
                 if (j < M) 
-					continue; //because composite numbers less than M are of no concern to use.
-                primesNow[j - M] = false; //j-M = index in the array primesNow,this is because max index allowed in the array
-                //is not N ,it is DIFF_SIZE so we are storing the numbers offset from M
-                //while printing we will add M and print to get the actual number
+					continue;
+                primesNow[j - M] = false;
             }
         }
 
-        /*for (int i = 0; i < cnt; i++) //in the above loop the first prime numbers for example say 2,3 are also set to false
-        { //hence we need to print them in case they  are within range.
-            if (myPrimes[i] >= M && myPrimes[i] <= N) //without this loop you will see that for an range(1,30), 2 and 3 does
-                printf("%d\n",myPrimes[i]); //not get printed
-        }*/
-
-        for (int i = 0; i < N - M + 1; ++i) // primesNow[]=false for all composite numbers,so prime numbers can be found by checking with true
+        for (int i = 0; i < N - M + 1; ++i)
         {
-            if (primesNow[i] == true && (i + M) != 1) //i+M != 1 to ensure that for i=0 and M=1 , 1 is not considered a prime number
-                printf("%d\n",i+M); //print our prime numbers in the range
+            if (primesNow[i] == true && (i + M) != 1)
+                printf("%d\n",i+M);
         }
     }
     return 0;
