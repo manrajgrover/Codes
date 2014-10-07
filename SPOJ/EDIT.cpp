@@ -1,48 +1,61 @@
-#include <iostream>
-#include <bits/stdc++.h>
-using namespace std;
+#include<iostream>
+#include<string.h>
+int main()
+{
+    char str[1005];
+    int len,i,count1,a,count2;
+    while(scanf("%s",str)!=EOF)
+    {
+        len=strlen(str);
+        int arr1[len];
+        int arr2[len];
+        int arr3[len];
+        count1=0,count2=0;
+        if(len==1)
+            printf("0\n");
+        else
+        {
+            for(i=0;i<len;i++)
+            {
+                a=str[i];
+               // printf("%d ",a);
+                if(a>=65&&a<=90)
+                    arr1[i]=1;
+                else
+                    arr1[i]=0;
+            }
 
-long long T[2005][2005];
-
-long long min(long long a,long long b){
-	return a>b?b:a;
-}
-
-
-long long edit(string a,string b){
-	long long m,n,left,top,corner,cost=0;
-	m=a.length()+1;
-	n=b.length()+1;
-	for(long i=0;i<m;i++){
-		for(long j=0;j<n;j++){
-			T[i][j]=-1;
-		}
-	}
-	for(long i=0;i<m;i++){
-		T[i][0]=i;
-	}
-	for(long j=0;j<n;j++){
-		T[0][j]=j;
-	}
-	for(long i=1;i<m;i++){
-		for(long j=1;j<n;j++){
-			left=T[i][j-1]+1;
-			top=T[i-1][j]+1;
-			corner=T[i-1][j-1]+(a[i-1]!=b[j-1]);
-			T[i][j]=min(min(left,top),corner);
-		}
-	}
-	cost=T[m-1][n-1];
-	return cost;
-}
-
-int main() {
-	long t;
-	string a,b;
-	cin>>t;
-	while(t--){
-		cin>>a>>b;
-		cout<<edit(a,b)<<endl;
-	}
-	return 0;
+            a=str[0];
+            if(a>=65&&a<=90){
+                arr2[0]=1;
+                arr3[0]=0;
+            }
+            else{
+                arr2[0]=0;
+                arr3[0]=1;
+            }
+            for(i=1;i<len;i++)
+            {
+                if(arr2[i-1]==0)
+                {
+                    arr2[i]=1;
+                    arr3[i]=0;
+                }
+                else{
+                    arr2[i]=0;
+                    arr3[i]=1;
+                }
+            }
+           
+            for(i=0;i<len;i++)
+            {
+                if(arr1[i]!=arr2[i])
+                    count1+=1;
+                if(arr1[i]!=arr3[i])
+                    count2+=1;
+            }
+            printf("%d\n",(count1<count2)?count1:count2);
+        }
+    }
+    return 0;
 }
