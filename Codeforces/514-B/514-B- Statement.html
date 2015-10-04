@@ -1,0 +1,88 @@
+<div class="ttypography">
+ <div class="problem-statement">
+  <div class="header">
+   <div class="title">
+    B. Han Solo and Lazer Gun
+   </div>
+   <div class="time-limit">
+    <div class="property-title">
+     time limit per test
+    </div>1 second
+   </div>
+   <div class="memory-limit">
+    <div class="property-title">
+     memory limit per test
+    </div>256 megabytes
+   </div>
+   <div class="input-file">
+    <div class="property-title">
+     input
+    </div>standard input
+   </div>
+   <div class="output-file">
+    <div class="property-title">
+     output
+    </div>standard output
+   </div>
+  </div>
+  <div>
+   <p>There are <span class="tex-span"><i>n</i></span> Imperial stormtroopers on the field. The battle field is a plane with Cartesian coordinate system. Each stormtrooper is associated with his coordinates <span class="tex-span">(<i>x</i>,?<i>y</i>)</span> on this plane. </p>
+   <p>Han Solo has the newest duplex lazer gun to fight these stormtroopers. It is situated at the point <span class="tex-span">(<i>x</i><sub class="lower-index">0</sub>,?<i>y</i><sub class="lower-index">0</sub>)</span>. In one shot it can can destroy all the stormtroopers, situated on some line that crosses point <span class="tex-span">(<i>x</i><sub class="lower-index">0</sub>,?<i>y</i><sub class="lower-index">0</sub>)</span>.</p>
+   <p>Your task is to determine what minimum number of shots Han Solo needs to defeat all the stormtroopers.</p>
+   <p>The gun is the newest invention, it shoots very quickly and even after a very large number of shots the stormtroopers don't have enough time to realize what's happening and change their location. </p>
+  </div>
+  <div class="input-specification">
+   <div class="section-title">
+    Input
+   </div>
+   <p>The first line contains three integers <span class="tex-span"><i>n</i></span>, <span class="tex-span"><i>x</i><sub class="lower-index">0</sub></span> ? <span class="tex-span"><i>y</i><sub class="lower-index">0</sub></span> (<span class="tex-span">1???<i>n</i>???1000</span>, <span class="tex-span">?-?10<sup class="upper-index">4</sup>???<i>x</i><sub class="lower-index">0</sub>,?<i>y</i><sub class="lower-index">0</sub>???10<sup class="upper-index">4</sup></span>) — the number of stormtroopers on the battle field and the coordinates of your gun.</p>
+   <p>Next <span class="tex-span"><i>n</i></span> lines contain two integers each <span class="tex-span"><i>x</i><sub class="lower-index"><i>i</i></sub></span>, <span class="tex-span"><i>y</i><sub class="lower-index"><i>i</i></sub></span> (<span class="tex-span">?-?10<sup class="upper-index">4</sup>???<i>x</i><sub class="lower-index"><i>i</i></sub>,?<i>y</i><sub class="lower-index"><i>i</i></sub>???10<sup class="upper-index">4</sup></span>) — the coordinates of the stormtroopers on the battlefield. It is guaranteed that no stormtrooper stands at the same point with the gun. Multiple stormtroopers can stand at the same point.</p>
+  </div>
+  <div class="output-specification">
+   <div class="section-title">
+    Output
+   </div>
+   <p>Print a single integer — the minimum number of shots Han Solo needs to destroy all the stormtroopers. </p>
+  </div>
+  <div class="sample-tests">
+   <div class="section-title">
+    Sample test(s)
+   </div>
+   <div class="sample-test">
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>4 0 0<br>1 1<br>2 2<br>2 0<br>-1 -1<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>2<br></pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>2 1 2<br>1 1<br>1 0<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>1<br></pre>
+    </div>
+   </div>
+  </div>
+  <div class="note">
+   <div class="section-title">
+    Note
+   </div>
+   <p>Explanation to the first and second samples from the statement, respectively: </p>
+   <center> 
+    <img class="tex-graphics" src="http://codeforces.com/predownloaded/a3/3f/a33fad502fdb69c3cfbad0b7365817c0de00077b.png"> 
+   </center>
+  </div>
+ </div>
+</div>

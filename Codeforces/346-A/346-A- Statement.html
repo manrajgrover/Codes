@@ -1,0 +1,94 @@
+<div class="ttypography">
+ <div class="problem-statement">
+  <div class="header">
+   <div class="title">
+    A. Alice and Bob
+   </div>
+   <div class="time-limit">
+    <div class="property-title">
+     time limit per test
+    </div>2 seconds
+   </div>
+   <div class="memory-limit">
+    <div class="property-title">
+     memory limit per test
+    </div>256 megabytes
+   </div>
+   <div class="input-file">
+    <div class="property-title">
+     input
+    </div>standard input
+   </div>
+   <div class="output-file">
+    <div class="property-title">
+     output
+    </div>standard output
+   </div>
+  </div>
+  <div>
+   <p>It is so boring in the summer holiday, isn't it? So Alice and Bob have invented a new game to play. The rules are as follows. First, they get a set of <span class="tex-span"><i>n</i></span> distinct integers. And then they take turns to make the following moves. During each move, either Alice or Bob (the player whose turn is the current) can choose two distinct integers <span class="tex-span"><i>x</i></span> and <span class="tex-span"><i>y</i></span> from the set, such that the set doesn't contain their absolute difference <span class="tex-span">|<i>x</i>?-?<i>y</i>|</span>. Then this player adds integer <span class="tex-span">|<i>x</i>?-?<i>y</i>|</span> to the set (so, the size of the set increases by one).</p>
+   <p>If the current player has no valid move, he (or she) loses the game. The question is who will finally win the game if both players play optimally. Remember that Alice always moves first.</p>
+  </div>
+  <div class="input-specification">
+   <div class="section-title">
+    Input
+   </div>
+   <p>The first line contains an integer <span class="tex-span"><i>n</i></span> (<span class="tex-span">2???<i>n</i>???100</span>) — the initial number of elements in the set. The second line contains <span class="tex-span"><i>n</i></span> distinct space-separated integers <span class="tex-span"><i>a</i><sub class="lower-index">1</sub>,?<i>a</i><sub class="lower-index">2</sub>,?...,?<i>a</i><sub class="lower-index"><i>n</i></sub></span> (<span class="tex-span">1???<i>a</i><sub class="lower-index"><i>i</i></sub>???10<sup class="upper-index">9</sup></span>) — the elements of the set.</p>
+  </div>
+  <div class="output-specification">
+   <div class="section-title">
+    Output
+   </div>
+   <p>Print a single line with the winner's name. If Alice wins print "<span class="tex-font-style-tt">Alice</span>", otherwise print "<span class="tex-font-style-tt">Bob</span>" (without quotes).</p>
+  </div>
+  <div class="sample-tests">
+   <div class="section-title">
+    Sample test(s)
+   </div>
+   <div class="sample-test">
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>2<br>2 3<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>Alice<br></pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>2<br>5 3<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>Alice<br></pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>3<br>5 6 7<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>Bob<br></pre>
+    </div>
+   </div>
+  </div>
+  <div class="note">
+   <div class="section-title">
+    Note
+   </div>
+   <p>Consider the first test sample. Alice moves first, and the only move she can do is to choose 2 and 3, then to add 1 to the set. Next Bob moves, there is no valid move anymore, so the winner is Alice.</p>
+  </div>
+ </div>
+</div>
