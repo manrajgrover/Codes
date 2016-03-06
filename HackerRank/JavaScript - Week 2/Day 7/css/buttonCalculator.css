@@ -1,0 +1,32 @@
+#res{
+    background-color: lightgray;
+    width: 81%;
+    height: 48px;
+    font-size: 20px;
+    border: solid;
+}
+
+.btn{
+    width: 22%;
+    height: 36px;
+    font-size: 18px;
+}
+
+#btns{
+    width: 90%;
+}
+
+.binary{
+    background-color: lightgreen;
+    color: brown;
+}
+
+.imp{
+    background-color: darkgreen;
+    color: white;
+}
+
+.operations{
+    background-color: black;
+    color:red;
+}
